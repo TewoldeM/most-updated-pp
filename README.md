@@ -45,11 +45,6 @@
 
 ## 🖼️ Screenshots
 <img width="998" height="850" alt="Screenshot 2025-08-18 at 4 52 24 PM" src="https://github.com/user-attachments/assets/a9a05363-26b6-4b66-9de8-b476ed0d39a1" />
-<img width="958" height="840" alt="Screenshot 2025-08-18 at 4 56 45 PM" src="https://github.com/user-attachments/assets/36e4b4f8-deb5-46db-952d-ecf59b172647" />
-<img width="1811" height="924" alt="Screenshot 2025-08-14 at 7 20 03 PM" src="https://github.com/user-attachments/assets/490ec5c9-7553-4d89-ab39-9b6a892d77de" />
-
-
-
 ---
 
 If you’d like, I can:
