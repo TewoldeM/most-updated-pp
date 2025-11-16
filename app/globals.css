@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 /* Design system: colors, gradients, fonts, etc. All colors are HSL */
