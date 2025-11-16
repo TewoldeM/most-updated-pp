@@ -2,10 +2,12 @@
 import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 import Head from "next/head";
-import { Code2, Instagram, LinkedinIcon } from "lucide-react";
+import { ArrowDown, Code2, Instagram, LinkedinIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FaTelegram } from "react-icons/fa";
-
+import About from "@/components/About";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -28,7 +30,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white font-sans">
+    <div className="min-h-screen bg-background text-white font-sans">
       <Head>
         <title>Tewolde Marie | Portfolio</title>
         <meta
@@ -43,16 +45,18 @@ export default function Portfolio() {
       </Head>
 
       {/* Navbar */}
-      <motion.nav
+      {/* <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
-        className="fixed top-0 w-full bg-gray-800/80 backdrop-blur-md z-50"
+        className="fixed top-0 w-full bg-gray-950 backdrop-blur-md z-50"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-blue-400"><Code2/></h1>
+              <h1 className="text-2xl font-bold text-blue-400">
+                <Code2 />
+              </h1>
             </div>
             <div className="hidden md:flex space-x-8 items-center">
               <a
@@ -82,6 +86,9 @@ export default function Portfolio() {
             </div>
             <div className="md:hidden flex items-center">
               <button
+                type="button"
+                aria-label="Toggle menu"
+                title="Toggle menu"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-blue-300"
               >
@@ -136,190 +143,107 @@ export default function Portfolio() {
             </div>
           </motion.div>
         )}
-      </motion.nav>
+      </motion.nav> */}
 
       {/* Hero Section */}
-      <section
-        id="home"
-        className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-blue-900"
-      >
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="text-center px-4"
-        >
-          <h1 className="text-5xl md:text-7xl font-bold text-blue-400 mb-4">
-            Tewolde Marie
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-200 mb-6">
-            Full Stack Next.js Developer | AI Enthusiast
-          </p>
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
+        {/* Animated background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-gradient-end/5" />
 
-          <motion.a
-            href="#social"
-            whileHover={{ scale: 1.1 }}
-            className="inline-block bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition"
-          >
-            Connect with Me
-          </motion.a>
-        </motion.div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-blue-400 text-center mb-12"
-          >
-            About Me
-          </motion.h2>
-          <motion.p
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-lg text-blue-100 max-w-3xl mx-auto text-center"
-          >
-            I&apos;m a passionate full-stack developer with over 3 years of
-            experience building dynamic and scalable web applications. I use{" "}
-            <strong>Next.js</strong> both on the frontend and backend to deliver
-            high-performance, full-stack solutions. My frontend development is
-            powered by <strong>React</strong> and <strong>Tailwind CSS</strong>,
-            while on the server side, I leverage{" "}
-            <strong>Next.js API routes</strong>, <strong>Prisma ORM</strong>,
-            and <strong>PostgreSQL</strong> to create robust and efficient
-            data-driven systems. I&apos;m also expanding my skills in{" "}
-            <strong>Python</strong>, especially for AI and backend automation.
-            My goal is to craft seamless, responsive, and intuitive digital
-            experiences with clean architecture and thoughtful design.
-          </motion.p>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-blue-400 text-center mb-12"
-          >
-            Projects
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Hospital Appointment Fullstack Web App",
-                desc: "A complete healthcare appointment system built with Next.js, Prisma, and PostgreSQL, allowing users to book, manage, and track appointments efficiently.",
-                github:
-                  "https://github.com/TewoldeM/Hospital_Appointment_Fullstack_app-",
-              },
-              {
-                title: "Learning managnment Fullstack Web App",
-                desc: "A full-featured Learning Management System developed using Next.js, Tailwind CSS, and PostgreSQL. It supports user roles, course management, and interactive learning.",
-                github:
-                  "https://github.com/TewoldeM/LMS-full-stack-app-/security",
-              },
-              {
-                title: "Expense-Income Tracker Fullstack Web App",
-                desc: "A simple and elegant web app to track income and expenses in real-time and have dashboard with smooth UI, built with Next.js, React, and Tailwind CSS.",
-                github: "https://github.com/TewoldeM/Expense-income-Tracker",
-              },
-              {
-                title: "JJU ID & Mail Card Replacement Fullstack Web App",
-                desc: "A custom-built solution for Jimma University to manage ID mail card replacements, built using a fullstack Next.js architecture.",
-                github:
-                  "https://github.com/TewoldeM/JJU-ID-Mail-Card-Replacement-Web-App",
-              },
-              {
-                title: "VolunteerHub Fullstack Web App",
-                desc: "A platform that connects volunteers(govermental and NGO) with organizations. Built with Next.js, Prisma, PostgreSQL, and custom authentication.",
-                github: "https://github.com/TewoldeM/VolunteerHub",
-              },
-            ].map((project, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-blue-500/50 transition"
-              >
-                <h3 className="text-2xl font-semibold text-blue-400 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-blue-100">{project.desc}</p>
-                <div className="mt-6">
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <Button
-                      variant="outline"
-                      className="text-blue-400 border-blue-400 hover:text-white hover:bg-blue-600"
-                    >
-                      View on GitHub
-                    </Button>
-                  </motion.a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Social Media Section */}
-      <section id="social" className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-blue-400 text-center mb-12"
-          >
-            Connect with Me
-          </motion.h2>
+        <div className="container mx-auto text-center relative z-10">
           <motion.div
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="flex justify-center space-x-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            <motion.a
-              href="https://www.linkedin.com/in/tewolde-marie-2879b230b/"
-              whileHover={{ scale: 1.2 }}
-              className="text-blue-300 hover:text-blue-400 transition"
+            <motion.h1
+              className="text-5xl md:text-7xl font-bold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <LinkedinIcon className="w-10 h-10" />
-            </motion.a>
-            <motion.a
-              href="https://www.instagram.com/theo12212025"
-              whileHover={{ scale: 1.2 }}
-              className="text-blue-300 hover:text-blue-400 transition"
+              Hi, I'm <span className="gradient-text">Tewolde Marie</span>
+            </motion.h1>
+
+            <motion.h2
+              className="text-2xl md:text-4xl text-muted-foreground mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <Instagram className="w-10 h-10" />
-            </motion.a>
-            <motion.a
-              href="https://t.me/M_W_M_T_Y_A_L_S"
-              whileHover={{ scale: 1.2 }}
-              className="text-blue-300 hover:text-blue-400 transition"
+              Full Stack Developer
+            </motion.h2>
+
+            <motion.p
+              className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <FaTelegram className="w-10 h-10"/>
-            </motion.a>
+              I'm a passionate developer who loves creating powerful and
+              user-friendly digital products that make a difference in people's
+              lives. <br />
+              <span className="text-xl">
+                I'm confortable with React, Next.js, Typescript,Nest.js and React Native
+              </span>
+            </motion.p>
+
+            <motion.div
+              className="flex gap-8 justify-center flex-wrap"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              <Button
+                size="lg"
+                className="bg-blue-500 text-primary-foreground hover:bg-blue-500/90"
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Get In Touch
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() =>
+                  document
+                    .getElementById("projects")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                View My Work
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-8 left-1/2 -translate-x-1/2"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 1,
+              repeat: Infinity,
+              repeatType: "reverse",
+              repeatDelay: 0.5,
+            }}
+          >
+            <ArrowDown className="w-6 h-6 text-muted-foreground" />
           </motion.div>
         </div>
       </section>
+
+      {/* About Section */}
+      <About />
+
+      {/* Projects Section */}
+      <Projects />
+
+      {/* Social Media Section */}
+      <Contact />
 
       {/* Footer */}
       <footer className="py-6 bg-gray-800 text-center">
