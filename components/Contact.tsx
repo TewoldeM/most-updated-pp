@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, Instagram } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 
 const socialLinks = [
   { name: "GitHub", icon: Github, href: "github.com/TewoldeM" },
@@ -32,7 +32,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            Let's <span className="gradient-text">Connect</span>
+            Let&apos;s <span className="gradient-text">Connect</span>
           </h2>
 
           <motion.p
@@ -41,7 +41,7 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            I'm always open to discussing new projects, creative ideas, or
+            I&apos;m always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision.
           </motion.p>
 
@@ -51,7 +51,7 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            {socialLinks.map((social, index) => (
+            {socialLinks.map((social) => (
               <motion.div
                 key={social.name}
                 whileHover={{ scale: 1.1, y: -5 }}

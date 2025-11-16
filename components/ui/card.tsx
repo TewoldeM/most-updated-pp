@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utiles"
+import { cn } from "@/libs/utiles"
 import * as React from "react"
 
 

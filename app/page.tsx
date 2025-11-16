@@ -1,10 +1,9 @@
 "use client";
-import { motion, Variants } from "framer-motion";
+import { motion} from "framer-motion";
 import { useState } from "react";
 import Head from "next/head";
-import { ArrowDown, Code2, Instagram, LinkedinIcon } from "lucide-react";
+import { ArrowDown,} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { FaTelegram } from "react-icons/fa";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
@@ -50,7 +49,7 @@ const [loading ]= useState(false)
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Hi, I'm <span className="gradient-text">Tewolde Marie</span>
+              Hi, I&apos;m <span className="gradient-text">Tewolde Marie</span>
             </motion.h1>
 
             <motion.h2
@@ -68,11 +67,11 @@ const [loading ]= useState(false)
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              I'm a passionate developer who loves creating powerful and
-              user-friendly digital products that make a difference in people's
+              I&apos;m a passionate developer who loves creating powerful and
+              user-friendly digital products that make a difference in people&apos;s
               lives. <br />
               <span className="text-xl">
-                I'm confortable with React, Next.js, Typescript,Nest.js and React Native
+                I&apos;m confortable with React, Next.js, Typescript,Nest.js and React Native
               </span>
             </motion.p>
 

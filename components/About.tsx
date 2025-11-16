@@ -26,7 +26,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-              I'm a Software Engineer specializing in building full-stack web
+              I&apos;m a Software Engineer specializing in building full-stack web
               and mobile applications. With a strong foundation in modern
               technologies, I create scalable solutions that combine beautiful
               user interfaces with robust backend systems.
@@ -34,9 +34,9 @@ const About = () => {
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               💡 My passion lies in transforming complex problems into simple,
-              elegant solutions. Whether it's crafting responsive web
+              elegant solutions. Whether it&apos;s crafting responsive web
               applications with React and Next.js, or building mobile
-              experiences with React Native, I'm dedicated to delivering
+              experiences with React Native, I&apos;m dedicated to delivering
               high-quality products that exceed expectations. ✨
             </p>
           </motion.div>
