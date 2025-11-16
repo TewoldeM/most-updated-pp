@@ -8,26 +8,15 @@ import { FaTelegram } from "react-icons/fa";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-export default function Portfolio() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const containerVariants: Variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
-    },
-  };
+export default function Home() {
+const [loading ]= useState(false)
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background text-white font-sans">
@@ -43,107 +32,6 @@ export default function Portfolio() {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
       </Head>
-
-      {/* Navbar */}
-      {/* <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="fixed top-0 w-full bg-gray-950 backdrop-blur-md z-50"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-blue-400">
-                <Code2 />
-              </h1>
-            </div>
-            <div className="hidden md:flex space-x-8 items-center">
-              <a
-                href="#home"
-                className="text-blue-300 hover:text-blue-400 transition"
-              >
-                Home
-              </a>
-              <a
-                href="#about"
-                className="text-blue-300 hover:text-blue-400 transition"
-              >
-                About
-              </a>
-              <a
-                href="#projects"
-                className="text-blue-300 hover:text-blue-400 transition"
-              >
-                Projects
-              </a>
-              <a
-                href="#social"
-                className="text-blue-300 hover:text-blue-400 transition"
-              >
-                Contact
-              </a>
-            </div>
-            <div className="md:hidden flex items-center">
-              <button
-                type="button"
-                aria-label="Toggle menu"
-                title="Toggle menu"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-blue-300"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            className="md:hidden bg-gray-800"
-          >
-            <div className="flex flex-col space-y-4 p-4">
-              <a
-                href="#home"
-                className="text-blue-300 hover:text-blue-400 transition"
-              >
-                Home
-              </a>
-              <a
-                href="#about"
-                className="text-blue-300 hover:text-blue-400 transition"
-              >
-                About
-              </a>
-              <a
-                href="#projects"
-                className="text-blue-300 hover:text-blue-400 transition"
-              >
-                Projects
-              </a>
-              <a
-                href="#social"
-                className="text-blue-300 hover:text-blue-400 transition"
-              >
-                Social
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </motion.nav> */}
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
@@ -251,6 +139,6 @@ export default function Portfolio() {
           © 2025 Tewolde Marie. All rights reserved.
         </p>
       </footer>
-    </div>
+</div>
   );
 }

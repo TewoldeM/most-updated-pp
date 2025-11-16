@@ -88,11 +88,11 @@ const Contact = () => {
         <div className="flex justify-center items-center">
           <div className="flex flex-col justify-start items-start">
             <p className="text-2xl font-bold text-blue-500">
-              Call Me: <span className="text-red-500">+2519-25-23-31-33</span>
+              Call Me: <span className="text-red-400">+2519-25-23-31-33</span>
             </p>
             <p className="text-2xl font-bold text-blue-500">
               Email:{" "}
-              <span className="text-red-500">tewoldemarie6@gmail.com</span>
+              <span className="text-red-400">tewoldemarie6@gmail.com</span>
             </p>
           </div>
         </div>
