@@ -40,6 +40,15 @@ const projects = [
 
   // ⭐ In Progress Projects
   {
+    title: "Dynamic Form Builder",
+    description: "A powerful drag-and-drop Form Builder application...",
+    image: "/fr1.jpg",
+    demo: "https://full-stack-form-builder-web-app-368.vercel.app/",
+    code: "https://github.com/TewoldeM/Full-stack-Form-builder-Web-App",
+    tags: ["Next.js", "TypeScript", "Zustand", "Tailwind CSS"],
+    finished: true,
+  },
+  {
     title: "Expense & Income Tracker",
     description: "A personal finance tracking app...",
     image: "/expensetracker.jpg",
@@ -48,15 +57,7 @@ const projects = [
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
     finished: false,
   },
-  {
-    title: "Dynamic Form Builder",
-    description: "A powerful drag-and-drop Form Builder application...",
-    image: "/formbuilder.jpg",
-    demo: null,
-    code: "https://github.com/TewoldeM/Full-stack-Form-builder-Web-App",
-    tags: ["Next.js", "TypeScript", "Zustand", "Tailwind CSS"],
-    finished: false,
-  },
+
   {
     title: "VolunteerHub Platform",
     description: "A full-stack volunteer matching platform...",
